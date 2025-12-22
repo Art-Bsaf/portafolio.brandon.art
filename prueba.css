@@ -1,0 +1,79 @@
+body { /* El cuerpo principal, color y centrado de las cosas */
+    background-image: linear-gradient(to bottom, #36BFB1, #038C73, #02735E, #014034, #022417);
+    min-height: 100vh; 
+    background-attachment: fixed;
+    margin: 0;
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.tarjeta {/* sirve para ajustar todo en forma de una columna y se vea más bonito*/
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+
+    padding: 40px; 
+    width: 350px; 
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 19px;
+}
+
+img {
+    width: auto ;
+    max-height: 300px;
+    clip-path: circle(40%);
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none; 
+    color: #03816a;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+a:hover{
+    color: #36BFB1; 
+    transform: scale(1.1);
+}
+.links {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    gap: 25px; 
+    margin-top: 20px;
+}
+
+h1, h2, img {
+    position: static;
+    margin: 10px 0;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.animacion-entrada {
+    animation: aparecer 2s ease-out forwards;
+}
