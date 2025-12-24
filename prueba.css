@@ -5,8 +5,11 @@ body { /* El cuerpo principal, color y centrado de las cosas */
     margin: 0;
 
     display: flex;
-    justify-content: center; 
-    align-items: center;
+    flex-direction: column; 
+    align-items: center; 
+    padding-top: 50px; /* Espacio arriba para que la tarjeta no pegue al borde */
+    padding-bottom: 50px; /* Espacio abajo para poder scrollear cómodo */
+    gap: 40px;
 }
 
 .tarjeta {/* sirve para ajustar todo en forma de una columna y se vea más bonito*/
@@ -23,15 +26,15 @@ body { /* El cuerpo principal, color y centrado de las cosas */
     position: relative;
 }
 
-h1 {
+.h1-tarjeta {
     font-size: 25px;
 }
 
-h2 {
+.h2-tarjeta {
     font-size: 19px;
 }
 
-img {
+.img-tarjeta {
     width: auto ;
     max-height: 300px;
     clip-path: circle(40%);
@@ -40,7 +43,7 @@ img {
 
 a {
     text-decoration: none; 
-    color: #03816a;
+    color: #06be9c;
     font-weight: bold;
     font-size: 16px;
     transition: 0.3s;
@@ -58,7 +61,7 @@ a:hover{
     margin-top: 20px;
 }
 
-h1, h2, img {
+.h1-tarjeta, .h2-tarjeta, .img-tarjeta {
     position: static;
     margin: 10px 0;
 }
@@ -66,7 +69,7 @@ h1, h2, img {
 @keyframes aparecer {
     from {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(-50px);
     }
     to {
         opacity: 1;
@@ -76,4 +79,39 @@ h1, h2, img {
 
 .animacion-entrada {
     animation: aparecer 2s ease-out forwards;
+}
+
+.proyectos {
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.titulo-proyectos {
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+    margin-bottom: 20px;
+}
+
+.grid-proyectos {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.tarjeta-mini {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    width: 200px;
+    text-decoration: none;
+    color: 06be9c;
+    transition: 0.3s;
+}
+
+.tarjeta-mini:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
 }
